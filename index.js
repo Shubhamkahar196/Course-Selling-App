@@ -17,7 +17,7 @@ app.use("/api/v1/admin",adminRouter);
 app.use("/api/v1/course",courseRouter);
 
 async function main(){
-    await mongoose.connect(""); //
+    await mongoose.connect(".env"); //
     app.listen(3000,()=>{
         console.log("Server is running on port 3000");
     })
