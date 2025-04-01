@@ -117,7 +117,7 @@ userRouter.post("/signin", async function (req, res) {
 
         //compare the provided password with the stored hashed password using bcrypt
 
-        const passswordMatch = await bcrypt.compare(password, user.password);
+        const passswordMatch =  bcrypt.compare(password, user.password);
 
         //if the password matches, create a jwt token and send it to the client
         if (passswordMatch) {
